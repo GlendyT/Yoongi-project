@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+.loader{
+  font-size: 2.5rem;
+  color: #040000;
+  display: inline-block;
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  position: relative;
+}
+.loader:before{
+  content: '';
+  animation: 5s print linear alternate infinite;
+}
+.loader:after{
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translatey(-45%);
+  width: 2px;
+  height: 1.3em;
+  background: currentColor;
+  opacity: 0.8;
+  animation: 10s blink steps(2) infinite;
+}
+
+@keyframes blink {
+  0%  { visibility: hidden;}
+  100%  { visibility: visible;}
+}
+@keyframes print {
+  0% { content: 'A'}
+  10% { content: 'AG'}
+  20% { content: 'AGU'}
+  30% { content: 'AGUS'}
+  40% { content: 'AGUST'}
+  50% { content: 'AGUST '}
+  60% { content: 'AGUST D'}
+  70% { content: 'AGUST D.'}
+  80% { content: 'AGUST D..'}
+  90% , 100% { content: 'AGUST D...'}
+}
