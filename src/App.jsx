@@ -3,8 +3,6 @@ import Formulario from "./components/Formulario";
 import { Resultado } from "./components/Resultado";
 import {  useState } from "react";
 import "./index.css";
-import Spinner from "./components/Spinner";
-import { DiseñosImg } from "./Diseños/DiseñosImg";
 
 
 
