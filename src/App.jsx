@@ -4,6 +4,7 @@ import { Resultado } from "./components/Resultado";
 import {  useState } from "react";
 import "./index.css";
 import Spinner from "./components/Spinner";
+import { DiseñosImg } from "./Diseños/DiseñosImg";
 
 
 
@@ -14,7 +15,7 @@ function App() {
 
 
   return (
-    <div className=" relative min-h-screen flex flex-col sm:justify-center items-center bg-hero">
+    <div className=" relative min-h-screen flex flex-col sm:justify-center items-center">
 
       {!descripcion.length > 0 ? (
         <Formulario setDescripcion={setDescripcion} setRemitente={setRemitente} setDiseño={setDiseño}  />

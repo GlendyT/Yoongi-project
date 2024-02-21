@@ -7,7 +7,7 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
     <div>
       <button
         onClick={handleDownload}
-        className="w-full bg-gray-500 hover:bg-gray-600 transition-colors text-white cursor-pointer p-3 my-2 uppercase font-bold rounded-xl "
+        className="w-full bg-black text-white cursor-pointer p-3 my-2 font-bold font-pixel "
       >
         Download
         <svg
@@ -26,9 +26,39 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
         </svg>
       </button>
 
+      <button className="w-full bg-white text-black cursor-pointer p-3 font-bold font-pixel">
+        <a
+          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20day&url=https://twitter.com/bts_bighit&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
+        "
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            className="float-end"
+          >
+            <path
+              fill="currentColor"
+              d="M8.5 2h2.5L11 2h-2.5zM13 2h2.5L15.5 2h-2.5zM10.5 2h5v0h-5zM8.5 2h5v0h-5zM10 2h3.5L13.5 2h-3.5z"
+            >
+              <animate
+                fill="freeze"
+                attributeName="d"
+                dur="0.8s"
+                keyTimes="0;0.3;0.5;1"
+                values="M8.5 2h2.5L11 2h-2.5zM13 2h2.5L15.5 2h-2.5zM10.5 2h5v0h-5zM8.5 2h5v0h-5zM10 2h3.5L13.5 2h-3.5z;M8.5 2h2.5L11 22h-2.5zM13 2h2.5L15.5 22h-2.5zM10.5 2h5v2h-5zM8.5 20h5v2h-5zM10 2h3.5L13.5 22h-3.5z;M8.5 2h2.5L11 22h-2.5zM13 2h2.5L15.5 22h-2.5zM10.5 2h5v2h-5zM8.5 20h5v2h-5zM10 2h3.5L13.5 22h-3.5z;M1 2h2.5L18.5 22h-2.5zM5.5 2h2.5L23 22h-2.5zM3 2h5v2h-5zM16 20h5v2h-5zM18.5 2h3.5L5 22h-3.5z"
+              />
+            </path>
+          </svg>
+          Share
+        </a>
+      </button>
+
       <button
         onClick={handleLogout}
-        className="w-full bg-gray-500 hover:bg-gray-600 transition-colors text-white cursor-pointer p-3 my-4 uppercase font-bold rounded-xl"
+        className="w-full bg-transparent text-white cursor-pointer p-3 my-4 font-pixel text-center"
       >
         Create Another
         <svg
@@ -37,7 +67,7 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 float-end"
+          className="w-6 h-6 float-end text-black"
         >
           <path
             strokeLinecap="round"
@@ -45,15 +75,6 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
             d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
           />
         </svg>
-      </button>
-      <button className="w-full bg-gray-500 hover:bg-gray-600 transition-colors text-white cursor-pointer p-3 uppercase font-bold rounded-xl">
-        <a
-          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20day&url=https://twitter.com/bts_bighit&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
-        "
-          target="_blank"
-        >
-          Share
-        </a>
       </button>
     </div>
   );

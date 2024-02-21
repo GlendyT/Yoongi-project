@@ -47,7 +47,7 @@ export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
   return (
     <div className="relative min-h-screen flex sm:justify-center items-center">
       <div className="relative sm:max-w-sm w-full">
-        <div className="relative w-full px-6 py-4 bg-gray-100 shadow-md">
+        <div className="relative w-full px-6 py-4 shadow-md">
           <Header/>
             <CardInside
              descripcion={descripcion}
