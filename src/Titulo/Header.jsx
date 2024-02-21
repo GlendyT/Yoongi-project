@@ -3,12 +3,12 @@
 export default function Header() {
   return (
     <div>
-      <div className="block mt-10 text-4xl text-center font-bold text-white">
+      <div className="block mt-10 text-4xl text-center font-bold text-white font-mono">
         Into the 
         <div
-         className="uppercase font-[Press Start 2P]"
+         className="uppercase font-pixel text-5xl "
         >suga-verse</div>
-        <h1 className="text-center text-sm">
+        <h1 className="text-center text-sm font-mono ">
           Create and share your lyrics inspired by Yoongi´s extraordinary
           lyricism
         </h1>

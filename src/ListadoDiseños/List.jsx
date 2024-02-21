@@ -1,11 +1,11 @@
-import { DISEÑOS } from "../constants";
+
 
 export default function List({ design, setDesign }) {
 
   return (
     <div>
       <div className="my-5">
-        <label className=" text-gray-700 text-sm mb-2">Design</label>
+        <label className="text-sm mb-2 text-white">Design</label>
 
         <select
           name="diseño"

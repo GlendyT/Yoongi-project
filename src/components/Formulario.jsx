@@ -23,19 +23,19 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col sm:justify-center items-center">
+    <div className="relative min-h-screen flex flex-col sm:justify-center items-center text-white">
       <div className="relative sm:max-w-sm w-full">
-        <div className="relative w-full px-6 py-4 shadow-md">
+        <div className="relative w-full px-10 py-4 shadow-md">
           <Header />
-          <form className="mt-5" onSubmit={handleSubmit}>
+          <form className="mt-5 font-mono" onSubmit={handleSubmit}>
             <div className="my-5">
               <label
-                className="flex float-start text-gray-700 text-sm mb-2"
+                className="flex float-start text-sm mb-2"
                 htmlFor="descripcion"
               >
                 Your Lyrics
               </label>
-              <div className="text-sm mb-2 float-end">{280 - description.length}/280</div>
+              <div className="text-sm mb-2 float-end text-black">{280 - description.length}/280</div>
               <textarea
                 maxLength={280}
                 placeholder="Write something"
@@ -48,11 +48,11 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
               /> 
             </div>
 
-            <div className="my-5">
-              <label className="flex float-start text-gray-700 text-sm mb-2">
+            <div className="my-5 ">
+              <label className="flex float-start text-gray-700 text-sm mb-2 text-white">
                 From
               </label>
-              <div className="text-sm mb-2 float-end">{30 - from.length}/30</div>
+              <div className="text-sm mb-2 float-end text-black">{30 - from.length}/30</div>
               <input
                 maxLength={30}
                 placeholder="Your Name"
@@ -61,7 +61,7 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
                 type="text"
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
               />
             </div>
             <List setDesign={setDesign} />
@@ -70,14 +70,14 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
               disabled={!design}
               id="btn"
               type="submit"
-              className="w-full bg-black text-white cursor-pointer p-3 uppercase font-bold rounded-xl disabled:bg-slate-400 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
+              className="w-full bg-black text-white cursor-pointer p-3 font-pixel uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
             >
-              Create Post
+              Create post
             </button>
           </form>
         </div>
         {error && (
-          <p className="text-red-400 text-center">
+          <p className="text-red-700 text-center font-bold uppercase font-mono pt-1">
             All questions must be filled out
           </p>
         )}
