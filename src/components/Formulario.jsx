@@ -49,7 +49,7 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
             </div>
 
             <div className="my-5 ">
-              <label className="flex float-start text-gray-700 text-sm mb-2 text-white">
+              <label className="flex float-start text-sm mb-2 text-white">
                 From
               </label>
               <div className="text-sm mb-2 float-end text-black">{30 - from.length}/30</div>
