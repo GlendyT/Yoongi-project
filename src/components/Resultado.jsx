@@ -1,7 +1,23 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import CardInside from "../Card/CardInside";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from "../Titulo/Header";
+
+const notify = () => {
+  toast.success('Image Downloaded!', {
+  position: "top-center",
+  autoClose: 1500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: 0,
+  theme: "light",
+  }); 
+};
+
 
 export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
 
@@ -10,6 +26,7 @@ export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
   useEffect(() => {
       if(imageSaved) {
         const timer = setTimeout(() => {
+          notify();
           setImageSaved(false);
         }, 3000);
 
@@ -45,9 +62,8 @@ export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
 
 
   return (
-    <div className="relative min-h-screen flex sm:justify-center items-center">
+    <div className="relative min-h-screen sm:justify-center items-center">
       <div className="relative sm:max-w-sm w-full">
-        <div className="relative w-full px-6 py-4 shadow-md">
           <Header/>
             <CardInside
              descripcion={descripcion}
@@ -56,9 +72,9 @@ export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
              elementRef={elementRef}
              handleLogout= {handleLogout}
              htmlToImageConvert={htmlToImageConvert}
+             notify= {notify}
             />
-
-        </div>
+            <ToastContainer/>
       </div>
     </div>
   );

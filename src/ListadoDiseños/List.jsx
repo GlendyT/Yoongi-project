@@ -20,8 +20,11 @@ export default function List({ design, setDesign }) {
           <option value="dday">D-Day</option>
           <option value="d2">D-2</option>
           <option value="agustd">Agust D</option>
+          <option value="pp2">People PT2</option>
+          <option value="hgm">Haegum</option>
 
         </select>
+        
       </div>
     </div>
   );

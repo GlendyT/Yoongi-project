@@ -1,13 +1,21 @@
-export default function Buttons({ htmlToImageConvert, handleLogout }) {
+import { useState } from "react";
+
+export default function Buttons({ htmlToImageConvert, handleLogout}) {
+
+//deshabilitar el boton de descarga
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+ 
   const handleDownload = () => {
+    setButtonDisabled(true);
     htmlToImageConvert();
-    // notify()
+
   };
   return (
     <div>
       <button
         onClick={handleDownload}
-        className="w-full bg-black text-white cursor-pointer p-3 my-2 font-bold font-pixel "
+        className="w-full bg-black text-white cursor-pointer p-3 my-2 font-bold font-pixel disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
+        disabled= {buttonDisabled}
       >
         Download
         <svg
@@ -26,7 +34,8 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
         </svg>
       </button>
 
-      <button className="w-full bg-white text-black cursor-pointer p-3 font-bold font-pixel">
+      <button 
+      className="w-full bg-white text-black cursor-pointer p-3 font-bold font-pixel ">
         <a
           href="https://twitter.com/intent/tweet?text=Happy%20Suga%20day&url=https://twitter.com/bts_bighit&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
         "
@@ -58,7 +67,7 @@ export default function Buttons({ htmlToImageConvert, handleLogout }) {
 
       <button
         onClick={handleLogout}
-        className="w-full bg-transparent text-white cursor-pointer p-3 my-4 font-pixel text-center"
+        className="w-full bg-transparent text-white cursor-pointer p-3 my-4 font-pixel text-center hover:bg-black "
       >
         Create Another
         <svg
