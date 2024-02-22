@@ -4,35 +4,44 @@ import { useEffect, useState } from "react";
 import dday from "../assets/dday.png";
 import d2 from "../assets/d2.png";
 import agustd from "../assets/agustd.png";
+import pp2 from "../assets/pp2.png"
+import hgm from "../assets/hgm.png"
 
 const dicImg = {
   dday: dday,
   d2: d2,
   agustd: agustd,
+  pp2: pp2,
+  hgm: hgm,
 };
 
 const styles = {
   dday: {
-    div1: "flex space-x-4 pt-5",
-    div2: "absolute pl-1 pr-10 pt-8 max-sm:pt-20 ",
-    div3: "text-white text-sm tracking-tight pr-4 text-justify pb-20 max-sm:pb-10 ",
-    p: "text-white float-end pt-6 pl-20 ",
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-20 max-ms:p-20`}",
+    div3: "text-white text-sm tracking-tight pb-20 ",
+    p: "text-white float-end ",
   },
     d2: {
-    div1: "flex space-x-4 pt-5",
-    div2: "absolute pl-10 pr-5 pt-10",
-    div3: "text-white text-sm tracking-tight pl-10 pr-10 text-right max-sm:pb-10 ",
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block pl-16 pr-6 pb-40 pt-24 max-ms:p-20`}",
+    div3: "text-white text-sm tracking-tight text-right pl-20 ",
     p: "text-white float-end pr-5 pt-15 max-sm:text-xs",
   },
   agustd: {
-    div1: "flex space-x-2 pt-5",
-    div2: "absolute pr-20 pl-10 pt-20 max-sm:pr-20 max-sm:pt-20",
-    div3: "text-black text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-10 max-md:pr-15 max-sm:text-xs",
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-32 max-ms:p-20`}",
+    div3: "text-black text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs",
+    p: "text-black float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
+  },
+  pp2: {
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pt-40 pb-32 max-ms:p-20`}",
+    div3: "backdrop-blur-sm bg-white/30 text-black text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs",
+    p: "text-black float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
+  },
+   hgm: {
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-32 max-ms:p-20`}",
+    div3: "text-white text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs",
     p: "text-black float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
   },
 };
-
-//sm:text-left pt-20 max-md:pt-18 
 
 export default function CardInside({
   descripcion,
@@ -41,8 +50,10 @@ export default function CardInside({
   htmlToImageConvert,
   handleLogout,
   diseño,
+  notify
 }) {
   const [ready, isReady] = useState(false);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -59,13 +70,15 @@ export default function CardInside({
       ) : (
         <>
           <div ref={elementRef}>
-            <div className={styles[diseño].div1}>
-              <img src={dicImg[diseño]} alt="" />
-              <div className={styles[diseño].div2}>
-                <div className={styles[diseño].div3}>
+            <div className={styles[diseño].div1}
+             style={{backgroundImage:`url(${dicImg[diseño]})`}}
+            >
+              <div className="p-0">
+                <div className={styles[diseño].div3}
+                >
                   {descripcion}
                 </div>
-                <p className={styles[diseño].p} >
+                <p className="text-white float-end pt-15 pl-20 " >
                   -{remitente}
                 </p>
               </div>
@@ -74,6 +87,7 @@ export default function CardInside({
           <Buttons
             htmlToImageConvert={htmlToImageConvert}
             handleLogout={handleLogout}
+            notify={notify}
           />
         </>
       )}
