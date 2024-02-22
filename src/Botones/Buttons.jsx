@@ -37,7 +37,7 @@ export default function Buttons({ htmlToImageConvert, handleLogout}) {
       <button 
       className="w-full bg-white text-black cursor-pointer p-3 font-bold font-pixel ">
         <a
-          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20day&url=https://yoongi-project.vercel.app/&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
+          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20day&url=https://open.spotify.com/artist/5RmQ8k4l3HZ8JoPb4mNsML/&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
         "
           target="_blank"
         >

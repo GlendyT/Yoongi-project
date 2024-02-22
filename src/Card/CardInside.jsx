@@ -18,7 +18,7 @@ const dicImg = {
 const styles = {
   dday: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-20 max-ms:p-20`}",
-    div3: "text-white text-sm tracking-tight pb-20 ",
+    div3: "text-white text-sm tracking-tight pb-20  ",
     p: "text-white float-end ",
   },
     d2: {
@@ -34,7 +34,7 @@ const styles = {
   pp2: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pt-40 pb-32 max-ms:p-20`}",
     div3: "backdrop-blur-sm bg-white/30 text-black text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs",
-    p: "text-black float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
+    p: "text-white float-end pt-4 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
   },
    hgm: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-32 max-ms:p-20`}",
@@ -71,8 +71,7 @@ export default function CardInside({
         <>
           <div ref={elementRef}>
             <div className={styles[diseño].div1}
-             style={{backgroundImage:`url(${dicImg[diseño]})`}}
-            >
+             style={{backgroundImage:`url(${dicImg[diseño]})`}}>
               <div className="p-0">
                 <div className={styles[diseño].div3}
                 >
