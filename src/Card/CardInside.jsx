@@ -23,8 +23,8 @@ const styles = {
   },
     d2: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block pl-16 pr-6 pb-40 pt-24 max-ms:p-20`}",
-    div3: "text-white text-sm tracking-tight text-right pl-20 ",
-    p: "text-white float-end pr-5 pt-15 max-sm:text-xs",
+    div3: "text-white text-sm tracking-tight text-center pl-20 ",
+    p: "text-white text-center pr-5 pt-20 max-sm:text-xs",
   },
   agustd: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-32 max-ms:p-20`}",
@@ -39,7 +39,7 @@ const styles = {
    hgm: {
     div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-32 max-ms:p-20`}",
     div3: "text-white text-sm tracking-tight pt-10 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs",
-    p: "text-black float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
+    p: "text-white float-end pt-16 max-sm:pt-none pr-0 max-md:pt-5 max-sm:pt-0 max-sm:text-xs",
   },
 };
 
@@ -78,7 +78,7 @@ export default function CardInside({
                 >
                   {descripcion}
                 </div>
-                <p className="text-white float-end pt-15 pl-20 " >
+                <p className={styles[diseño].p} >
                   -{remitente}
                 </p>
               </div>
