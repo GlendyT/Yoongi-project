@@ -7,6 +7,25 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
   const [from, setFrom] = useState("");
   const [design, setDesign] = useState("");
   const [error, setError] = useState(false);
+  const [charCount, setCharCount] = useState(0);
+  const [charCountFrom, setCharCountFrom] = useState(0);
+  const maxCharLimit = 281;
+  const maxFromLimit = 31;
+
+  const handleTextArea = (e) => {
+    const inputValue = e.target.value;
+    if (inputValue.length <= maxCharLimit) {
+      setDescription(inputValue);
+      setCharCount(inputValue.length);
+    }
+  };
+  const handleFrom = (e) => {
+    const inputValue = e.target.value;
+    if (inputValue.length <= maxFromLimit) {
+      setFrom(inputValue);
+      setCharCountFrom(inputValue.length);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,12 +41,15 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
     setDiseño([design]);
   };
 
+  const isMaxCharLimitReached = charCount === maxCharLimit;
+  const isMaxFromLimitReached = charCountFrom === maxFromLimit;
+
   return (
-    <div className="relative min-h-screen flex flex-col sm:justify-center items-center text-white">
+    <div className="relative min-h-screen flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
-        <div className="relative w-full px-10 py-4 shadow-md">
+        <div className="relative w-full px-10 py-4  max-sm:px-10 max-sm:py-24">
           <Header />
-          <form className="mt-5 font-mono" onSubmit={handleSubmit}>
+          <form className="mt-5 font-dmmono" onSubmit={handleSubmit}>
             <div className="my-5">
               <label
                 className="flex float-start text-sm mb-2"
@@ -35,33 +57,49 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
               >
                 Your Lyrics
               </label>
-              <div className="text-sm mb-2 float-end text-black">{280 - description.length}/280</div>
+              <div className={`text-sm mb-2 float-end ${isMaxCharLimitReached ? 'text-red-500' : 'text-black'}`}>
+                 {isMaxCharLimitReached && <span className="text-red-500">Too long!</span>} {charCount}/280
+              </div>
               <textarea
-                maxLength={280}
+                maxLength={maxCharLimit}
                 placeholder="Write something"
                 rows={5}
                 id="descripcion"
                 name="descripcion"
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
-              /> 
+                onChange={handleTextArea}
+                className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
+                  isMaxCharLimitReached
+                    ? "border-red-500 text-red-500"
+                    : "border-gray-300"
+                }`}
+              />
             </div>
 
             <div className="my-5 ">
               <label className="flex float-start text-sm mb-2 text-white">
                 From
               </label>
-              <div className="text-sm mb-2 float-end text-black">{30 - from.length}/30</div>
+              <div
+                className={`text-sm mb-2 float-end ${
+                  isMaxFromLimitReached ? "text-red-500" : "text-black"
+                }`}
+              >
+                {isMaxFromLimitReached && <span className="text-red-500">Too long!</span>} {charCountFrom}/30 
+              </div>
               <input
-                maxLength={30}
+                maxLength={maxFromLimit}
                 placeholder="Your Name"
                 id="remitente"
                 name="remitente"
                 type="text"
                 value={from}
-                onChange={(e) => setFrom(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
+                onChange={handleFrom}
+                className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
+                  isMaxFromLimitReached
+                    ? "border-red-500 text-red-500"
+                    : "border-gray-300"
+                }`}
               />
             </div>
             <List setDesign={setDesign} />
@@ -77,7 +115,7 @@ const Formulario = ({ setDescripcion, setRemitente, setDiseño }) => {
           </form>
         </div>
         {error && (
-          <p className="text-red-700 text-center font-bold uppercase font-mono pt-1">
+          <p className="text-red-700 text-center font-bold uppercase font-dmmono pt-1">
             All questions must be filled out
           </p>
         )}

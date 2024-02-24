@@ -62,7 +62,7 @@ export function Resultado({ descripcion,setDescripcion, remitente, diseño }) {
 
 
   return (
-    <div className="relative min-h-screen sm:justify-center items-center">
+    <div className="relative min-h-screen sm:justify-center items-center max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
           <Header/>
             <CardInside
