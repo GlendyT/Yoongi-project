@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <div className=" relative min-h-screen flex flex-col sm:justify-center items-center">
+    <div className=" relative min-h-screen flex flex-col sm:justify-center items-center max-sm:m-5">
 
       {!descripcion.length > 0 ? (
         <Formulario setDescripcion={setDescripcion} setRemitente={setRemitente} setDiseño={setDiseño}  />

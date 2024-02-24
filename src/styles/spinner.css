@@ -40,3 +40,84 @@
   80% { content: 'AGUST D..'}
   90% , 100% { content: 'AGUST D...'}
 }
+/*Loader1*/
+.loader1{
+  font-size: 2.5rem;
+  color: #040000;
+  display: inline-block;
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  position: relative;
+}
+.loader1:before{
+  content: '';
+  animation: 5s print1 linear alternate infinite;
+}
+.loader1:after{
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translatey(-45%);
+  width: 2px;
+  height: 1.3em;
+  background: currentColor;
+  opacity: 0.8;
+  animation: 10s blink steps(2) infinite;
+}
+
+@keyframes blink {
+  0%  { visibility: hidden;}
+  100%  { visibility: visible;}
+}
+@keyframes print1 {
+  0% { content: 'M'}
+  10% { content: 'MI'}
+  20% { content: 'MIN'}
+  30% { content: 'MIN '}
+  40% { content: 'MIN Y'}
+  50% { content: 'MIN YO'}
+  60% { content: 'MIN YOO'}
+  70% { content: 'MIN YOON'}
+  80% { content: 'MIN YOONG'}
+  90% , 100% { content: 'MIN YOONGI.'}
+}
+/*Loader2*/
+.loader2{
+  font-size: 2.5rem;
+  color: #040000;
+  display: inline-block;
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  position: relative;
+}
+.loader2:before{
+  content: '';
+  animation: 5s print2 linear alternate infinite;
+}
+.loader2:after{
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translatey(-45%);
+  width: 2px;
+  height: 1.3em;
+  background: currentColor;
+  opacity: 0.8;
+  animation: 10s blink steps(2) infinite;
+}
+
+@keyframes blink {
+  0%  { visibility: hidden;}
+  100%  { visibility: visible;}
+}
+@keyframes print2 {
+  0% { content: 'S'}
+  20% { content: 'SU'}
+  40% { content: 'SUG'}
+  60% { content: 'SUGA'}
+  80% { content: 'SUGA.'}
+  90%, 100% { content: 'SUGA..'}
+
+}

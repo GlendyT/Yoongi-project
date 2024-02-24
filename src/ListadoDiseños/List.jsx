@@ -1,6 +1,6 @@
 
 
-export default function List({ design, setDesign }) {
+export default function List({ design, setDesign, from }) {
 
   return (
     <div>
@@ -14,6 +14,7 @@ export default function List({ design, setDesign }) {
           value={design}
           onChange={(e) => setDesign(e.target.value)}
           className="shadow border rounded w-full py-2 px-3 text-gray-700  "
+          
 
         >
           <option value="">Select your artwork </option>
