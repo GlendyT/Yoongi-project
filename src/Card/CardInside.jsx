@@ -6,6 +6,7 @@ import d2 from "../assets/d2.png";
 import agustd from "../assets/agustd.png";
 import pp2 from "../assets/pp2.png"
 import hgm from "../assets/hgm.png"
+import yc from "../assets/agustdd.jpg"
 
 const dicImg = {
   dday: dday,
@@ -13,6 +14,7 @@ const dicImg = {
   agustd: agustd,
   pp2: pp2,
   hgm: hgm,
+  yc: yc,
 };
 
 const styles = {
@@ -45,6 +47,12 @@ const styles = {
     div2: "bg-orange-600 px-1 py-0",
     div3: "text-white tracking-tight pt-5 pb-2 text-justify max-md:pt-5 max-sm:pt-5 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs font-dmmono bg-orange-600",
     p: "text-white max-sm:pt-none max-md:pt-5 max-sm:pt-0 max-sm:text-xs font-dmmono w-full bg-orange-600 text-right text-sm",
+  },
+  yc: {
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-20 py-20 max-sm:px-10 max-sm:py-10 `}",
+    div2: " px-1 py-0",
+    div3: "text-white text-xs py-2 px-2 text-center max-md:pt-1 max-sm:pt-1 max-sm:pb-10 max-sm:pr-2 max-md:pr-15 max-sm:text-xs font-dmmono backdrop-blur-sm bg-black/30",
+    p: "text-white max-sm:pb-2 max-md:pt-0 max-sm:text-xs font-dmmono text-right text-xs backdrop-blur-sm bg-black/30",
   },
 };
 
