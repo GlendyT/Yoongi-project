@@ -6,7 +6,7 @@ import d2 from "../assets/d2.png";
 import agustd from "../assets/agustd.png";
 import pp2 from "../assets/pp2.png"
 import hgm from "../assets/hgm.png"
-import yc from "../assets/agustdd.jpg"
+import yc from "../assets/agustdd.png"
 
 const dicImg = {
   dday: dday,
