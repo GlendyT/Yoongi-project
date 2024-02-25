@@ -23,6 +23,7 @@ export default function List({ design, setDesign, from }) {
           <option value="agustd">Agust D</option>
           <option value="pp2">People Pt2</option>
           <option value="hgm">Haegum</option>
+          <option value="yc">Yoongi Special Collage</option>
 
         </select>
         
