@@ -7,7 +7,7 @@ export default function Header() {
         <div
          className="uppercase font-pixel text-5xl max-md:text-4xl "
         >suga-verse</div>
-        <h1 className="text-center text-sm font-dmmono pb-5 max-md:text-xs">
+        <h1 className="text-center text-sm font-dmmono pb-5 max-md:text-1xl">
           Create and share your lyrics inspired by Yoongi´s extraordinary
           lyricism
         </h1>
