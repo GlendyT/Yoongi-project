@@ -37,7 +37,7 @@ export default function Buttons({ htmlToImageConvert, handleLogout}) {
       <button 
       className="w-full bg-white text-black cursor-pointer p-3 font-bold font-pixel ">
         <a
-          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20Day&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy&hashtags=VerseForSuga
+          href="https://twitter.com/intent/tweet?text=Happy%20Suga%20Day&hashtags=VerseForSuga&hashtags=PoetryForSuga&hashtags=intothesugaverse&hashtags=IntoTheSugaVerse&hashtags=verseforsugabyarmy
         "
           target="_blank"
         >
